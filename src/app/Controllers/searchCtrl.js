@@ -1,4 +1,4 @@
-function SearchCtrl($scope) {
+function SearchCtrl($scope, $http, apiUrl) {
     $scope.message = "Type in any title, ANY title";
 
 
