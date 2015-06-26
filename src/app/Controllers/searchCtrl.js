@@ -1,5 +1,5 @@
-function SearchCtrl() {
-
+function SearchCtrl($scope) {
+    $scope.message = "Hello world";
 }
 
 
