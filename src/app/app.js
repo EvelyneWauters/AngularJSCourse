@@ -1,4 +1,4 @@
-var app = angular.module('movieApp', []);
+var app = angular.module('movieApp', ['movieApp.controllers']);
 
 
 app.config(function()   {
