@@ -1,5 +1,10 @@
 function SearchCtrl($scope) {
-    $scope.message = "Hello world";
+    $scope.message = "Type in any title, ANY title";
+
+
+    $scope.searchMovie = function(title)    {
+        console.log(title);
+    }
 }
 
 
