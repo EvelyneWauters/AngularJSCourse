@@ -23,8 +23,8 @@ function SearchCtrl($scope, $http, apiUrl, $log, $location) {
 
 
         $scope.addMovie = function(id)  {
-            var url = apiUrl + 'Movies';
-            $http.post(url, {id: id}).success(function()    {
+            var url = apiUrl + 'Movies/' + id;
+            $http.post(url).success(function()    {
                 $location.url('/collection');
             });
         };

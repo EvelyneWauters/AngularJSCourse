@@ -1,11 +1,12 @@
 
-<section ng-show="results">
+<section>
     <h2>Your Movies</h2>
 
     <div class="row">
 
         <div class="col-md-4 movie" ng-repeat="movie in movies" >
-
+            <img src="{{movie.thumbImage}}" />
+            <p>{{movie.title}}</p>
         </div>
     </div>
 
