@@ -1,4 +1,7 @@
-function SearchCtrl($scope, $http, apiUrl, $log) {
+
+
+
+function SearchCtrl($scope, $http, apiUrl, $log, $location) {
     $scope.message = "Type in any title, ANY title";
 
     $scope.searchMovie = function(title)    {
@@ -10,7 +13,6 @@ function SearchCtrl($scope, $http, apiUrl, $log) {
         $http.get(url).success(function(data) {
 
             $log.debug(data);
-
             $scope.results = data;
         });
 
@@ -20,6 +22,12 @@ function SearchCtrl($scope, $http, apiUrl, $log) {
         $log.debug('run');
 
 
+        $scope.addMovie = function(id)  {
+            var url = apiUrl + 'Movies';
+            $http.post(url, {id: id}).success(function()    {
+                $location.url('/collection');
+            });
+        };
     }
 }
 
